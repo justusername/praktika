@@ -3,11 +3,11 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m160713_053747_create_tables extends Migration
+class m160713_070104_create_tables extends Migration
 {
     public function Up()
     {
-        $this->createTable('leaders', [
+        $this->createTable('{{%leaders}}', [
             'LCODE' => Schema::TYPE_PK,
             'CODE' => Schema::TYPE_INTEGER,
             'FNAME' => Schema::TYPE_STRING,
@@ -17,20 +17,21 @@ class m160713_053747_create_tables extends Migration
             'PHONE' => Schema::TYPE_STRING
         ]);
 
-        $this->createTable('enterprises', [
+        $this->createTable('{{%enterprises}}', [
             'CODE' => Schema::TYPE_PK,
             'TITLE' => Schema::TYPE_STRING ,
             'REGION' => Schema::TYPE_STRING ,
             'CITY' => Schema::TYPE_STRING ,
             'ADDRESS' => Schema::TYPE_STRING ,
         ]);
+        $this->addForeignKey('CODE', '{{%leaders}}', 'CODE', '{{%enterprises}}', 'id', 'SET NULL', 'CASCADE');
     }
 
 
     public function down()
     {
-        $this->dropTable('enterprises');
-        $this->dropTable('leaders');
+        $this->dropTable('{{%enterprises}}');
+        $this->dropTable('{{%leaders}}');
 
     }
 
