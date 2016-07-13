@@ -69,3 +69,1202 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1468310581.041
     'REQUEST_TIME' => 1468310581
 ]
+2016-07-13 08:43:17 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'prakt' in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Connection.php:600
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Connection.php(861): yii\db\Connection->open()
+#3 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Connection.php(848): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Schema.php(149): yii\db\mysql\Schema->loadTableSchema('prakt_migration')
+#10 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\console\controllers\MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\console\Application.php(176): yii\base\Module->runAction('migrate', Array)
+#19 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#20 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 C:\xampp\htdocs\praktika2\yii(20): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'prakt' in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Connection.php:547
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Connection.php(861): yii\db\Connection->open()
+#1 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Connection.php(848): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\db\Schema.php(149): yii\db\mysql\Schema->loadTableSchema('prakt_migration')
+#8 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\console\controllers\MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#15 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\console\Application.php(176): yii\base\Module->runAction('migrate', Array)
+#17 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#18 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 C:\xampp\htdocs\praktika2\yii(20): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-07-13 08:43:16 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\1\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'WQ'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\1'
+    'LOCALAPPDATA' => 'C:\\Users\\1\\AppData\\Local'
+    'LOGONSERVER' => '\\\\WQ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'AMD64 Family 21 Model 2 Stepping 0, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '21'
+    'PROCESSOR_REVISION' => '0200'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\1\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'WQ'
+    'USERDOMAIN_ROAMINGPROFILE' => 'WQ'
+    'USERNAME' => '1'
+    'USERPROFILE' => 'C:\\Users\\1'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\xampp\\htdocs\\praktika2\\'
+    'PHP_SELF' => 'C:\\xampp\\htdocs\\praktika2\\yii'
+    'SCRIPT_NAME' => 'C:\\xampp\\htdocs\\praktika2\\yii'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\praktika2\\yii'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\praktika2\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1468392196.6029
+    'REQUEST_TIME' => 1468392196
+    'argv' => [
+        0 => 'C:\\xampp\\htdocs\\praktika2\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-07-13 08:54:20 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/say/gii". in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/say/gii', Array)
+#1 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2016-07-13 08:54:20 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][info][application] $_COOKIE = [
+    'vc' => '1'
+    'MoodleSession' => '1j2k4fdcbfkk2tf1hqc5isn9k6'
+    'MOODLEID1_' => 'C%5E%AFff'
+    '_csrf' => '3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p\";}'
+    'PHPSESSID' => '7umb7qp9k83dk7mob7q56ng5e3'
+    '_identity' => '6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+    '__captcha/site/captcha' => 'terurh'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'vc=1; MoodleSession=1j2k4fdcbfkk2tf1hqc5isn9k6; MOODLEID1_=C%255E%25AFff; _csrf=3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p%22%3B%7D; PHPSESSID=7umb7qp9k83dk7mob7q56ng5e3; _identity=6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/praktika2/web/index.php'
+    'REMOTE_PORT' => '53404'
+    'REDIRECT_URL' => '/praktika2/web/site/say/gii'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/praktika2/web/site/say/gii'
+    'SCRIPT_NAME' => '/praktika2/web/index.php'
+    'PHP_SELF' => '/praktika2/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468392860.252
+    'REQUEST_TIME' => 1468392860
+]
+2016-07-13 08:54:30 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/index/gii". in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/index/gii', Array)
+#1 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2016-07-13 08:54:30 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][info][application] $_COOKIE = [
+    'vc' => '1'
+    'MoodleSession' => '1j2k4fdcbfkk2tf1hqc5isn9k6'
+    'MOODLEID1_' => 'C%5E%AFff'
+    '_csrf' => '3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p\";}'
+    'PHPSESSID' => '7umb7qp9k83dk7mob7q56ng5e3'
+    '_identity' => '6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+    '__captcha/site/captcha' => 'terurh'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'vc=1; MoodleSession=1j2k4fdcbfkk2tf1hqc5isn9k6; MOODLEID1_=C%255E%25AFff; _csrf=3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p%22%3B%7D; PHPSESSID=7umb7qp9k83dk7mob7q56ng5e3; _identity=6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/praktika2/web/index.php'
+    'REMOTE_PORT' => '53406'
+    'REDIRECT_URL' => '/praktika2/web/site/index/gii'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/praktika2/web/site/index/gii'
+    'SCRIPT_NAME' => '/praktika2/web/index.php'
+    'PHP_SELF' => '/praktika2/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468392870.767
+    'REQUEST_TIME' => 1468392870
+]
+2016-07-13 09:00:53 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/index//gii". in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/index//gii', Array)
+#1 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2016-07-13 09:00:53 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][info][application] $_COOKIE = [
+    'vc' => '1'
+    'MoodleSession' => '1j2k4fdcbfkk2tf1hqc5isn9k6'
+    'MOODLEID1_' => 'C%5E%AFff'
+    '_csrf' => '3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p\";}'
+    'PHPSESSID' => '7umb7qp9k83dk7mob7q56ng5e3'
+    '_identity' => '6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+    '__captcha/site/captcha' => 'terurh'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'vc=1; MoodleSession=1j2k4fdcbfkk2tf1hqc5isn9k6; MOODLEID1_=C%255E%25AFff; _csrf=3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p%22%3B%7D; PHPSESSID=7umb7qp9k83dk7mob7q56ng5e3; _identity=6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/praktika2/web/index.php'
+    'REMOTE_PORT' => '53623'
+    'REDIRECT_URL' => '/praktika2/web/site/index//gii'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/praktika2/web/site/index//gii'
+    'SCRIPT_NAME' => '/praktika2/web/index.php'
+    'PHP_SELF' => '/praktika2/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468393253.798
+    'REQUEST_TIME' => 1468393253
+]
+2016-07-13 09:16:00 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected '<', expecting end of file in C:\xampp\htdocs\praktika2\controllers\EnterprisesController.php:17
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php(562): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID('enterprises')
+#4 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('')
+#5 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('enterprises', Array)
+#6 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2016-07-13 09:16:00 [::1][-][-][info][application] $_COOKIE = [
+    'vc' => '1'
+    'MoodleSession' => '1j2k4fdcbfkk2tf1hqc5isn9k6'
+    'MOODLEID1_' => 'C%5E%AFff'
+    '_csrf' => '3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p\";}'
+    'PHPSESSID' => '7umb7qp9k83dk7mob7q56ng5e3'
+    '_identity' => '6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'vc=1; MoodleSession=1j2k4fdcbfkk2tf1hqc5isn9k6; MOODLEID1_=C%255E%25AFff; _csrf=3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p%22%3B%7D; PHPSESSID=7umb7qp9k83dk7mob7q56ng5e3; _identity=6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/praktika2/web/index.php'
+    'REMOTE_PORT' => '53761'
+    'REDIRECT_URL' => '/praktika2/web/enterprises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/praktika2/web/enterprises'
+    'SCRIPT_NAME' => '/praktika2/web/index.php'
+    'PHP_SELF' => '/praktika2/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468394160.03
+    'REQUEST_TIME' => 1468394160
+]
+2016-07-13 09:18:42 [::1][-][-][error][Error] Error: Class 'app\controllers\app\models\Enterprises' not found in C:\xampp\htdocs\praktika2\controllers\SiteController.php:104
+Stack trace:
+#0 [internal function]: app\controllers\SiteController->actionEnterprises()
+#1 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('enterprises', Array)
+#4 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/enterprise...', Array)
+#5 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2016-07-13 09:18:42 [::1][-][-][info][application] $_COOKIE = [
+    'vc' => '1'
+    'MoodleSession' => '1j2k4fdcbfkk2tf1hqc5isn9k6'
+    'MOODLEID1_' => 'C%5E%AFff'
+    '_csrf' => '3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p\";}'
+    'PHPSESSID' => '7umb7qp9k83dk7mob7q56ng5e3'
+    '_identity' => '6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/praktika2/web/site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'vc=1; MoodleSession=1j2k4fdcbfkk2tf1hqc5isn9k6; MOODLEID1_=C%255E%25AFff; _csrf=3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p%22%3B%7D; PHPSESSID=7umb7qp9k83dk7mob7q56ng5e3; _identity=6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/praktika2/web/index.php'
+    'REMOTE_PORT' => '53780'
+    'REDIRECT_URL' => '/praktika2/web/site/enterprises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/praktika2/web/site/enterprises'
+    'SCRIPT_NAME' => '/praktika2/web/index.php'
+    'PHP_SELF' => '/praktika2/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468394322.763
+    'REQUEST_TIME' => 1468394322
+]
+2016-07-13 09:18:42 [::1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2-debug\LogTarget.php:57
+
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2-debug\LogTarget.php(57): serialize(Array)
+#1 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#2 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#3 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(Error))
+#6 {main}
+2016-07-13 09:18:42 [::1][-][-][info][application] $_COOKIE = [
+    'vc' => '1'
+    'MoodleSession' => '1j2k4fdcbfkk2tf1hqc5isn9k6'
+    'MOODLEID1_' => 'C%5E%AFff'
+    '_csrf' => '3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p\";}'
+    'PHPSESSID' => '7umb7qp9k83dk7mob7q56ng5e3'
+    '_identity' => '6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/praktika2/web/site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'vc=1; MoodleSession=1j2k4fdcbfkk2tf1hqc5isn9k6; MOODLEID1_=C%255E%25AFff; _csrf=3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p%22%3B%7D; PHPSESSID=7umb7qp9k83dk7mob7q56ng5e3; _identity=6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/praktika2/web/index.php'
+    'REMOTE_PORT' => '53780'
+    'REDIRECT_URL' => '/praktika2/web/site/enterprises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/praktika2/web/site/enterprises'
+    'SCRIPT_NAME' => '/praktika2/web/index.php'
+    'PHP_SELF' => '/praktika2/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468394322.763
+    'REQUEST_TIME' => 1468394322
+]
+2016-07-13 09:20:28 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/enterprises in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('enterprises', Array)
+#1 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/enterprise...', Array)
+#2 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2016-07-13 09:20:28 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][info][application] $_COOKIE = [
+    'vc' => '1'
+    'MoodleSession' => '1j2k4fdcbfkk2tf1hqc5isn9k6'
+    'MOODLEID1_' => 'C%5E%AFff'
+    '_csrf' => '3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p\";}'
+    'PHPSESSID' => '7umb7qp9k83dk7mob7q56ng5e3'
+    '_identity' => '6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+    '__captcha/site/captcha' => 'terurh'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/praktika2/web/site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'vc=1; MoodleSession=1j2k4fdcbfkk2tf1hqc5isn9k6; MOODLEID1_=C%255E%25AFff; _csrf=3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p%22%3B%7D; PHPSESSID=7umb7qp9k83dk7mob7q56ng5e3; _identity=6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/praktika2/web/index.php'
+    'REMOTE_PORT' => '53790'
+    'REDIRECT_URL' => '/praktika2/web/site/enterprises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/praktika2/web/site/enterprises'
+    'SCRIPT_NAME' => '/praktika2/web/index.php'
+    'PHP_SELF' => '/praktika2/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468394428.928
+    'REQUEST_TIME' => 1468394428
+]
+2016-07-13 09:20:33 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/enterprises in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('enterprises', Array)
+#1 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/enterprise...', Array)
+#2 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2016-07-13 09:20:33 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][info][application] $_COOKIE = [
+    'vc' => '1'
+    'MoodleSession' => '1j2k4fdcbfkk2tf1hqc5isn9k6'
+    'MOODLEID1_' => 'C%5E%AFff'
+    '_csrf' => '3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p\";}'
+    'PHPSESSID' => '7umb7qp9k83dk7mob7q56ng5e3'
+    '_identity' => '6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+    '__captcha/site/captcha' => 'terurh'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/praktika2/web/site/enterprises'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'vc=1; MoodleSession=1j2k4fdcbfkk2tf1hqc5isn9k6; MOODLEID1_=C%255E%25AFff; _csrf=3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p%22%3B%7D; PHPSESSID=7umb7qp9k83dk7mob7q56ng5e3; _identity=6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/praktika2/web/index.php'
+    'REMOTE_PORT' => '53793'
+    'REDIRECT_URL' => '/praktika2/web/site/enterprises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/praktika2/web/site/enterprises'
+    'SCRIPT_NAME' => '/praktika2/web/index.php'
+    'PHP_SELF' => '/praktika2/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468394433.87
+    'REQUEST_TIME' => 1468394433
+]
+2016-07-13 09:24:47 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/enterprises in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('enterprises', Array)
+#1 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/enterprise...', Array)
+#2 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2016-07-13 09:24:47 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][info][application] $_COOKIE = [
+    'vc' => '1'
+    'MoodleSession' => '1j2k4fdcbfkk2tf1hqc5isn9k6'
+    'MOODLEID1_' => 'C%5E%AFff'
+    '_csrf' => '3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p\";}'
+    'PHPSESSID' => '7umb7qp9k83dk7mob7q56ng5e3'
+    '_identity' => '6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+    '__captcha/site/captcha' => 'terurh'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/praktika2/web/site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'vc=1; MoodleSession=1j2k4fdcbfkk2tf1hqc5isn9k6; MOODLEID1_=C%255E%25AFff; _csrf=3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p%22%3B%7D; PHPSESSID=7umb7qp9k83dk7mob7q56ng5e3; _identity=6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/praktika2/web/index.php'
+    'REMOTE_PORT' => '53798'
+    'REDIRECT_URL' => '/praktika2/web/site/enterprises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/praktika2/web/site/enterprises'
+    'SCRIPT_NAME' => '/praktika2/web/index.php'
+    'PHP_SELF' => '/praktika2/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468394687.781
+    'REQUEST_TIME' => 1468394687
+]
+2016-07-13 09:25:02 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/enterprises.php in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('enterprises.php', Array)
+#1 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/enterprise...', Array)
+#2 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2016-07-13 09:25:02 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][info][application] $_COOKIE = [
+    'vc' => '1'
+    'MoodleSession' => '1j2k4fdcbfkk2tf1hqc5isn9k6'
+    'MOODLEID1_' => 'C%5E%AFff'
+    '_csrf' => '3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p\";}'
+    'PHPSESSID' => '7umb7qp9k83dk7mob7q56ng5e3'
+    '_identity' => '6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+    '__captcha/site/captcha' => 'terurh'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'vc=1; MoodleSession=1j2k4fdcbfkk2tf1hqc5isn9k6; MOODLEID1_=C%255E%25AFff; _csrf=3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p%22%3B%7D; PHPSESSID=7umb7qp9k83dk7mob7q56ng5e3; _identity=6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/praktika2/web/index.php'
+    'REMOTE_PORT' => '53802'
+    'REDIRECT_URL' => '/praktika2/web/site/enterprises.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/praktika2/web/site/enterprises.php'
+    'SCRIPT_NAME' => '/praktika2/web/index.php'
+    'PHP_SELF' => '/praktika2/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468394702.573
+    'REQUEST_TIME' => 1468394702
+]
+2016-07-13 09:26:27 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/enterprises.php in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('enterprises.php', Array)
+#1 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/enterprise...', Array)
+#2 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2016-07-13 09:26:27 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][info][application] $_COOKIE = [
+    'vc' => '1'
+    'MoodleSession' => '1j2k4fdcbfkk2tf1hqc5isn9k6'
+    'MOODLEID1_' => 'C%5E%AFff'
+    '_csrf' => '3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p\";}'
+    'PHPSESSID' => '7umb7qp9k83dk7mob7q56ng5e3'
+    '_identity' => '6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+    '__captcha/site/captcha' => 'terurh'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'vc=1; MoodleSession=1j2k4fdcbfkk2tf1hqc5isn9k6; MOODLEID1_=C%255E%25AFff; _csrf=3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p%22%3B%7D; PHPSESSID=7umb7qp9k83dk7mob7q56ng5e3; _identity=6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/praktika2/web/index.php'
+    'REMOTE_PORT' => '53808'
+    'REDIRECT_URL' => '/praktika2/web/site/enterprises.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/praktika2/web/site/enterprises.php'
+    'SCRIPT_NAME' => '/praktika2/web/index.php'
+    'PHP_SELF' => '/praktika2/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468394787.843
+    'REQUEST_TIME' => 1468394787
+]
+2016-07-13 09:26:30 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/enterprises in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('enterprises', Array)
+#1 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/enterprise...', Array)
+#2 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\praktika2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\praktika2\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2016-07-13 09:26:30 [::1][100][7umb7qp9k83dk7mob7q56ng5e3][info][application] $_COOKIE = [
+    'vc' => '1'
+    'MoodleSession' => '1j2k4fdcbfkk2tf1hqc5isn9k6'
+    'MOODLEID1_' => 'C%5E%AFff'
+    '_csrf' => '3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p\";}'
+    'PHPSESSID' => '7umb7qp9k83dk7mob7q56ng5e3'
+    '_identity' => '6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+    '__captcha/site/captcha' => 'terurh'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'vc=1; MoodleSession=1j2k4fdcbfkk2tf1hqc5isn9k6; MOODLEID1_=C%255E%25AFff; _csrf=3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p%22%3B%7D; PHPSESSID=7umb7qp9k83dk7mob7q56ng5e3; _identity=6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/praktika2/web/index.php'
+    'REMOTE_PORT' => '53809'
+    'REDIRECT_URL' => '/praktika2/web/site/enterprises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/praktika2/web/site/enterprises'
+    'SCRIPT_NAME' => '/praktika2/web/index.php'
+    'PHP_SELF' => '/praktika2/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468394790.416
+    'REQUEST_TIME' => 1468394790
+]
+2016-07-13 09:58:17 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S02]: Base table or view not found: 1932 Table 'prakt.prakt_enterprises' doesn't exist in engine in C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\db\Query.php(393): yii\db\Command->queryScalar()
+#3 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\db\ActiveQuery.php(329): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#4 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\db\Query.php(300): yii\db\ActiveQuery->queryScalar('COUNT(*)', NULL)
+#5 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#6 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#7 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#8 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#9 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#10 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#11 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#12 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#13 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\grid\GridView.php(313): yii\widgets\BaseListView->renderSection('{summary}')
+#14 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#15 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#16 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#17 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\grid\GridView.php(288): yii\widgets\BaseListView->run()
+#18 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\Widget.php(98): yii\grid\GridView->run()
+#19 C:\xampp\htdocs\praktika\views\enterprises\index.php(20): yii\base\Widget::widget(Array)
+#20 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#21 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#22 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\EnterprisesController))
+#23 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\EnterprisesController))
+#24 C:\xampp\htdocs\praktika\controllers\EnterprisesController.php(65): yii\base\Controller->render('index', Array)
+#25 [internal function]: app\controllers\EnterprisesController->actionIndex()
+#26 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#27 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#28 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#29 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('enterprises/ind...', Array)
+#30 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 C:\xampp\htdocs\praktika\web\index.php(12): yii\base\Application->run()
+#32 {main}
+
+Next yii\db\Exception: SQLSTATE[42S02]: Base table or view not found: 1932 Table 'prakt.prakt_enterprises' doesn't exist in engine
+The SQL being executed was: SELECT COUNT(*) FROM `prakt_enterprises` in C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\db\Query.php(393): yii\db\Command->queryScalar()
+#3 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\db\ActiveQuery.php(329): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#4 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\db\Query.php(300): yii\db\ActiveQuery->queryScalar('COUNT(*)', NULL)
+#5 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#6 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#7 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#8 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#9 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#10 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#11 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#12 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#13 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\grid\GridView.php(313): yii\widgets\BaseListView->renderSection('{summary}')
+#14 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#15 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#16 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#17 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\grid\GridView.php(288): yii\widgets\BaseListView->run()
+#18 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\Widget.php(98): yii\grid\GridView->run()
+#19 C:\xampp\htdocs\praktika\views\enterprises\index.php(20): yii\base\Widget::widget(Array)
+#20 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#21 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#22 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\EnterprisesController))
+#23 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\EnterprisesController))
+#24 C:\xampp\htdocs\praktika\controllers\EnterprisesController.php(65): yii\base\Controller->render('index', Array)
+#25 [internal function]: app\controllers\EnterprisesController->actionIndex()
+#26 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#27 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#28 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#29 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('enterprises/ind...', Array)
+#30 C:\xampp\htdocs\praktika\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 C:\xampp\htdocs\praktika\web\index.php(12): yii\base\Application->run()
+#32 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1932
+    [2] => Table 'prakt.prakt_enterprises' doesn't exist in engine
+)
+
+2016-07-13 09:58:17 [::1][-][-][info][application] $_COOKIE = [
+    'vc' => '1'
+    'MoodleSession' => '1j2k4fdcbfkk2tf1hqc5isn9k6'
+    'MOODLEID1_' => 'C%5E%AFff'
+    '_csrf' => '3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p\";}'
+    'PHPSESSID' => '7umb7qp9k83dk7mob7q56ng5e3'
+    '_identity' => '6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/praktika/web/leaders/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'vc=1; MoodleSession=1j2k4fdcbfkk2tf1hqc5isn9k6; MOODLEID1_=C%255E%25AFff; _csrf=3fe85d5dbd54bc0b6b1e344bb6acb5a5878393e279ca89eb5ff74c90078dbc69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SOuPI-HKTjHaXvj7fRbUA9a-iuF4Q8_p%22%3B%7D; PHPSESSID=7umb7qp9k83dk7mob7q56ng5e3; _identity=6ac7b39fd293875f97558b6615319ce15289b4169a3b1ec4473bdb27f402ba58a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\TortoiseGit\\bin;D:\\Program Files\\Git\\cmd;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/praktika/web/index.php'
+    'REMOTE_PORT' => '54139'
+    'REDIRECT_URL' => '/praktika/web/enterprises/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/praktika/web/enterprises/index'
+    'SCRIPT_NAME' => '/praktika/web/index.php'
+    'PHP_SELF' => '/praktika/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468396697.276
+    'REQUEST_TIME' => 1468396697
+]
