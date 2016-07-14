@@ -12,7 +12,15 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'CODE')->textInput() ?>
+    <?= $form->field($model, 'CODE')->dropDownList([
+            '1' => 'Вариант 1',
+            '2' => 'Var 2',
+            '3' => 'Var 3',
+        ],
+            [
+                'prompt' => 'Выберите один вариант'
+            ]);
+    ?>
 
     <?= $form->field($model, 'FNAME')->textInput(['maxlength' => true]) ?>
 
