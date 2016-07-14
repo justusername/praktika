@@ -1,16 +1,20 @@
 <?php
+
 /* @var $this yii\web\View */
+
 use yii\helpers\Html;
 
-$this->title = 'About';
+$this->title = 'Рћ РЅР°СЃ';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
     <h1><?= Html::encode($this->title) ?></h1>
-    <p>Выполнили:
+
+    <p>
+        Р’С‹РїРѕР»РЅРёР»Рё:
     </p>
-    <br>Малинин Кирилл Сергеевич
-    <br>Ованесян Артур Арутюнович
+    <br>РњР°Р»РёРЅРёРЅ РљРёСЂРёР»Р» РЎРµСЂРіРµРµРІРёС‡
+    <br>РћРІР°РЅРµСЃСЏРЅ РђСЂС‚СѓСЂ РђСЂСѓС‚СЋРЅРѕРІРёС‡
 
   <!--  <code><?= __FILE__ ?></code> -->
 </div>
