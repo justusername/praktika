@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?=
     $form->field($model, 'CODE')->dropDownList([
-        $ID=\app\models\Leaders::findCODE() => $NAME=\app\models\Leaders::findNAME(),
+    $ID=\app\controllers\LeadersController::findCODE() => $NAME=\app\controllers\LeadersController::findTITLE(),
             '2' => 'Var 2',
             '3' => 'Var 3',
         ],

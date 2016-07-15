@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use app\controllers\LeadersController;
 use Yii;
 
 /**
@@ -51,20 +52,4 @@ class Leaders extends \yii\db\ActiveRecord
             'PHONE' => 'Телефон',
         ];
     }
-
-
-
-    public static function findCODE()
-    {
-       // $connection=new CDbConnection('mysql:host=localhost;dbname=prakt','root','');
-
-       // $result = Leaders::findBySql('select CODE from LEADERS');
-        return 1;
-    }
-
-    public static function findNAME()
-    {
-        return 'test';
-    }
-
 }
