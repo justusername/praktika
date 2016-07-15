@@ -12,8 +12,9 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'CODE')->dropDownList([
-            '1' => 'Вариант 1',
+    <?=
+    $form->field($model, 'CODE')->dropDownList([
+        $ID=\app\models\Leaders::findCODE() => $NAME=\app\models\Leaders::findNAME(),
             '2' => 'Var 2',
             '3' => 'Var 3',
         ],
