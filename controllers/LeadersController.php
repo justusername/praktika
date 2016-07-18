@@ -121,16 +121,4 @@ class LeadersController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-
-    public static function findCODE()
-    {
-        $connection=Yii::$app->db;
-        $command=$connection->createCommand('select CODE from LEADERS');
-        return 1;
-    }
-
-    public static function findTITLE()
-    {
-        return 'test1';
-    }
 }

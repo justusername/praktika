@@ -12,17 +12,11 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?=
-    $form->field($model, 'CODE')->dropDownList([
-    $ID=\app\controllers\LeadersController::findCODE() => $NAME=\app\controllers\LeadersController::findTITLE(),
-            '2' => 'Var 2',
-            '3' => 'Var 3',
-        ],
-            [
-                'prompt' => 'Выберите один вариант'
-            ]);
-    ?>
 
+    <?= $form->field($model, 'CODE')->dropDownList(
+        \yii\helpers\ArrayHelper::map(\app\models\Enterprises::find()->all(),'CODE','TITLE'),
+        ['prompt'=>'Выберите предприятие '])
+    ?>
     <?= $form->field($model, 'FNAME')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'NAME')->textInput(['maxlength' => true]) ?>

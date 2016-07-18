@@ -52,4 +52,5 @@ class Leaders extends \yii\db\ActiveRecord
             'PHONE' => 'Телефон',
         ];
     }
+
 }
