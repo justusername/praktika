@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-
+use yii\data\SqlDataProvider;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
@@ -23,9 +23,25 @@ $this->params['breadcrumbs'][] = $this->title;
             'TITLE',
             'REGION',
             'CITY',
-            'ADDRESS',
+            'ADDRESS'
         ],
     ]) ?>
+
+    <?php
+    $dataProvider = new SqlDataProvider([
+        'sql' => 'SELECT NAME,FNAME from prakt_leaders'
+    ]);
+    ?>
+    
+    <?=
+     GridView::widget([
+        'dataProvider' => $dataProvider,
+        'columns' => [
+            'NAME',
+            'FNAME'
+        ],
+    ]); ?>
+
     <p>
         <?= Html::a('Изменить', ['update', 'id' => $model->CODE], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Удалить', ['delete', 'id' => $model->CODE], [
