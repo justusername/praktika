@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?php
         $code = $model -> CODE;
         $dataProvider = new SqlDataProvider([
-            'sql' => "SELECT CODE, NAME, FNAME, PATRONYMIC, EMAIL, PHONE from prakt_leaders WHERE CODE = '$code'"
+            'sql' => "SELECT LCODE, CODE, NAME, FNAME, PATRONYMIC, EMAIL, PHONE from prakt_leaders WHERE CODE = '$code'"
         ]);
         ?>
 
@@ -50,15 +50,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'dataProvider' => $dataProvider,
             'columns' =>
                 [
-                'NAME',
-                'FNAME',
-                'PATRONYMIC',
-                'EMAIL',
-                'PHONE',
-                ['class' => 'yii\grid\ActionColumn']
+                    'NAME',
+                    'FNAME',
+                    'PATRONYMIC',
+                    'EMAIL',
+                    'PHONE',
                 ]
         ]); ?>
 </div>
-
-
-
