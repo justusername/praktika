@@ -28,8 +28,9 @@ $this->params['breadcrumbs'][] = $this->title;
     ]) ?>
 
     <?php
+    $code = $model -> CODE;
     $dataProvider = new SqlDataProvider([
-        'sql' => 'SELECT NAME,FNAME from prakt_leaders'
+        'sql' => "SELECT CODE, NAME, FNAME, EMAIL, PHONE from prakt_leaders WHERE CODE = '$code'"
     ]);
     ?>
     
