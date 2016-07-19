@@ -42,7 +42,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'FNAME',
             'PATRONYMIC',
             'EMAIL',
-            'PHONE'
+            'PHONE',
+            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 
