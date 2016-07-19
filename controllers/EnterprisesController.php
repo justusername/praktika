@@ -8,8 +8,6 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use app\models\Leaders;
-
 
 /**
  * EnterprisesController implements the CRUD actions for Enterprises model.

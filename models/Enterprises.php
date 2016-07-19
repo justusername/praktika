@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use app\controllers\LeadersController;
 use Yii;
 
 /**
@@ -21,6 +22,7 @@ class Enterprises extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'prakt_enterprises';
+        return 'prakt_leaders';
     }
 
     /**
