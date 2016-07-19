@@ -44,7 +44,7 @@ class Leaders extends \yii\db\ActiveRecord
     {
         return [
             'LCODE' => 'Код руководителя',
-            'CODE' => 'Код предприятия',
+            'CODE' => 'Предприятие',
             'FNAME' => 'Фамилия',
             'NAME' => 'Имя',
             'PATRONYMIC' => 'Отчество',
