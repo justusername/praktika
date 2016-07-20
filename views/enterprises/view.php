@@ -44,19 +44,36 @@ $this->params['breadcrumbs'][] = $this->title;
             'sql' => "SELECT LCODE, CODE, NAME, FNAME, PATRONYMIC, EMAIL, PHONE from prakt_leaders WHERE CODE = '$code'"
         ]);
         $dataProvider->key = 'LCODE';
+        $count = $dataProvider->getCount();
 
         ?>
 
         <?=
         GridView::widget([
             'dataProvider' => $dataProvider,
+           
             'columns' =>
                 [
-                    'NAME',
-                    'FNAME',
-                    'PATRONYMIC',
-                    'EMAIL',
-                    'PHONE',
+                    [
+                        'label' => 'Фамилия',
+                        'value' => 'FNAME'
+                    ],
+                    [
+                        'label' => 'Имя',
+                        'value' => 'NAME'
+                    ],
+                    [
+                        'label' => 'Отчество',
+                        'value' => 'PATRONYMIC'
+                    ],
+                    [
+                        'label' => 'E-mail',
+                        'value' => 'EMAIL'
+                    ],
+                    [
+                        'label' => 'Телефон',
+                        'value' => 'PHONE'
+                    ],
                     [
                         'class' => 'yii\grid\ActionColumn',
                         'template'    => '{view} {update} {delete}',
