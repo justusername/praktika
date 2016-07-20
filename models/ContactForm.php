@@ -39,6 +39,10 @@ class ContactForm extends Model
     {
         return [
             'verifyCode' => 'Проверочный код',
+            'name' => 'Имя',
+            'email' => 'Электронный адрес',
+            'subject' => 'Тема',
+            'body' => 'Сообщение',
         ];
     }
 
