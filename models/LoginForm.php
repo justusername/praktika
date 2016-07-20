@@ -39,7 +39,8 @@ class LoginForm extends Model
     {
         return [
             'username' => 'Логин',
-            'password' => 'Пароль'
+            'password' => 'Пароль',
+            'rememberMe' => 'Запомнить'
         ];
     }
 
