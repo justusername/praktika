@@ -43,7 +43,10 @@ $this->params['breadcrumbs'][] = $this->title;
         $dataProvider = new SqlDataProvider([
             'sql' => "SELECT LCODE, CODE, NAME, FNAME, PATRONYMIC, EMAIL, PHONE from prakt_leaders WHERE CODE = '$code'"
         ]);
+        $dataProvider->key = 'LCODE';
+
         ?>
+
         <?=
         GridView::widget([
             'dataProvider' => $dataProvider,
@@ -54,6 +57,15 @@ $this->params['breadcrumbs'][] = $this->title;
                     'PATRONYMIC',
                     'EMAIL',
                     'PHONE',
-                ]
-        ]); ?>
+                    [
+                        'class' => 'yii\grid\ActionColumn',
+                        'template'    => '{view} {update} {delete}',
+                        'controller' => '/leaders',
+                    ]
+                    ],
+
+
+
+        ]);?>
+
 </div>
