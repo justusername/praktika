@@ -8,21 +8,21 @@ class m160713_070104_create_tables extends Migration
     public function Up()
     {
         $this->createTable('{{%leaders}}', [
-            'LCODE' => Schema::TYPE_PK,
-            'CODE' => Schema::TYPE_INTEGER,
-            'FNAME' => Schema::TYPE_STRING,
-            'NAME' => Schema::TYPE_STRING,
-            'PATRONYMIC' => Schema::TYPE_STRING,
-            'EMAIL' => Schema::TYPE_STRING,
-            'PHONE' => Schema::TYPE_STRING
+            'LCODE' => $this->primaryKey(),
+            'CODE' => $this->integer(),
+            'FNAME' => $this->string(),
+            'NAME' => $this->string(),
+            'PATRONYMIC' => $this->string(),
+            'EMAIL' => $this->string(),
+            'PHONE' => $this->string()
         ]);
 
         $this->createTable('{{%enterprises}}', [
-            'CODE' => Schema::TYPE_PK,
-            'TITLE' => Schema::TYPE_STRING ,
-            'REGION' => Schema::TYPE_STRING ,
-            'CITY' => Schema::TYPE_STRING ,
-            'ADDRESS' => Schema::TYPE_STRING ,
+            'CODE' => $this->primaryKey(),
+            'TITLE' => $this->string() ,
+            'REGION' => $this->string() ,
+            'CITY' => $this->string() ,
+            'ADDRESS' => $this->string() ,
         ]);
         $this->addForeignKey('CODE', '{{%leaders}}', 'CODE', '{{%enterprises}}', 'id', 'SET NULL', 'CASCADE');
     }
