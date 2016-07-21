@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\helpers\HtmlPurifier;
 ?>
 
-<div class="news-item">
+<div class="enterprises-item">
     <?= Html::encode($model->CODE) ?>
     <br>Название предприятия: <?= HtmlPurifier::process($model->TITLE) ?>
     <br>Область: <?= HtmlPurifier::process($model->REGION) ?>
