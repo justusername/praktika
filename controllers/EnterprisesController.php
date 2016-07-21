@@ -149,6 +149,7 @@ class EnterprisesController extends Controller
         $dataProvider = new SqlDataProvider([
             'sql' => "SELECT LCODE, CODE, NAME, FNAME, PATRONYMIC, EMAIL, PHONE from prakt_leaders WHERE CODE = '$code'"
         ]);
+        $dataProvider->key = 'LCODE';
         return $dataProvider;
     }
 }

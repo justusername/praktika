@@ -38,15 +38,11 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
     </div>
 <div class="leaders-index">
-        <?php
-        $code = $model -> CODE;
-        $dataProvider=\app\controllers\EnterprisesController::getLeaders($code);
-        $dataProvider->key = 'LCODE';
-        ?>
+        <?php $code = $model -> CODE; ?>
 
         <?=
         GridView::widget([
-            'dataProvider' => $dataProvider,
+            'dataProvider' => \app\controllers\EnterprisesController::getLeaders($code),
             'summary' => "",
             'columns' =>
                 [
