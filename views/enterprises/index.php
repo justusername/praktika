@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\widgets\ListView; // добавлена строка
 
 
 /* @var $this yii\web\View */
@@ -32,9 +33,13 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]);
-
-
+    
     ?>
+    <?= ListView::widget([
+        'dataProvider' => $dataProvider,
+        'itemView' => '_list',
+     ]);
+     ?>
 
 </div>
 
