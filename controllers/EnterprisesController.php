@@ -2,10 +2,10 @@
 
 namespace app\controllers;
 
+use app\models\Leaders;
 use Yii;
 use app\models\Enterprises;
 use yii\data\ActiveDataProvider;
-use yii\data\SqlDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -146,9 +146,7 @@ class EnterprisesController extends Controller
     }
     public static function getLeaders($code)
     {
-        $dataProvider = new SqlDataProvider([
-            'sql' => "SELECT LCODE, CODE, NAME, FNAME, PATRONYMIC, EMAIL, PHONE from prakt_leaders WHERE CODE = '$code'"
-        ]);
+        $dataProvider = new ActiveDataProvider(['query' => Leaders::find()->where(['CODE'=>$code])]);
         $dataProvider->key = 'LCODE';
         return $dataProvider;
     }

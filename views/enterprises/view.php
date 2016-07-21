@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use yii\data\SqlDataProvider;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
@@ -39,7 +38,6 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 <div class="leaders-index">
         <?php $code = $model -> CODE; ?>
-
         <?=
         GridView::widget([
             'dataProvider' => \app\controllers\EnterprisesController::getLeaders($code),
