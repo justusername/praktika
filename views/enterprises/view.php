@@ -40,9 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="leaders-index">
         <?php
         $code = $model -> CODE;
-        $dataProvider = new SqlDataProvider([
-            'sql' => "SELECT LCODE, CODE, NAME, FNAME, PATRONYMIC, EMAIL, PHONE from prakt_leaders WHERE CODE = '$code'"
-        ]);
+        $dataProvider=\app\controllers\EnterprisesController::getLeaders($code);
         $dataProvider->key = 'LCODE';
         ?>
 

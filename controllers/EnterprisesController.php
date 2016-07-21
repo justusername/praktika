@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\Enterprises;
 use yii\data\ActiveDataProvider;
+use yii\data\SqlDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -142,5 +143,12 @@ class EnterprisesController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+    public static function getLeaders($code)
+    {
+        $dataProvider = new SqlDataProvider([
+            'sql' => "SELECT LCODE, CODE, NAME, FNAME, PATRONYMIC, EMAIL, PHONE from prakt_leaders WHERE CODE = '$code'"
+        ]);
+        return $dataProvider;
     }
 }
