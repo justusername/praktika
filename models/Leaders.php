@@ -23,7 +23,7 @@ class Leaders extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'prakt_leaders';
+        return '{{%leaders}}';
     }
 
     /**
@@ -32,7 +32,7 @@ class Leaders extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['CODE'], 'integer'],
+            [['LCODE'],['CODE'], 'integer'],
             [['FNAME', 'NAME', 'PATRONYMIC', 'EMAIL', 'PHONE'], 'string', 'max' => 255],
         ];
     }

@@ -44,8 +44,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'sql' => "SELECT LCODE, CODE, NAME, FNAME, PATRONYMIC, EMAIL, PHONE from prakt_leaders WHERE CODE = '$code'"
         ]);
         $dataProvider->key = 'LCODE';
-        $count = $dataProvider->getCount();
-
         ?>
 
         <?=

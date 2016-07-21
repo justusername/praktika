@@ -21,8 +21,7 @@ class Enterprises extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'prakt_enterprises';
-        return 'prakt_leaders';
+        return '{{%enterprises}}';
     }
 
     /**
@@ -31,6 +30,7 @@ class Enterprises extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['CODE'], 'integer'],
             [['TITLE', 'REGION', 'CITY', 'ADDRESS'], 'string', 'max' => 255],
         ];
     }
