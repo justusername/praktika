@@ -20,21 +20,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Добавить предприятие', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'TITLE',
-            'REGION',
-            'CITY',
-            'ADDRESS',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]);
-    
-    ?>
     <?= ListView::widget([
         'dataProvider' => $dataProvider,
         'itemView' => '_list',
