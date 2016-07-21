@@ -8,7 +8,6 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\data\SqlDataProvider;
 
 /**
  * EnterprisesController implements the CRUD actions for Enterprises model.
@@ -143,14 +142,5 @@ class EnterprisesController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
-    }
-    public function sqlleaders()
-    {
-        $code = $model -> CODE;
-        $dataProvider = new SqlDataProvider([
-            'sql' => "SELECT LCODE, CODE, NAME, FNAME, PATRONYMIC, EMAIL, PHONE from prakt_leaders WHERE CODE = '$code'"
-        ]);
-        $dataProvider->key = 'LCODE';
-        return  $dataProvider;
     }
 }
