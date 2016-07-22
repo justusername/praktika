@@ -74,8 +74,13 @@ class EnterprisesController extends Controller
      */
     public function actionView($id)
     {
+        /*$dataProvider = new ActiveDataProvider(['query' => Leaders::find()->where(['CODE'=>$code])]);
+        $dataProvider->key = 'LCODE';*/
+        $leaders = Leaders::find()->where(['CODE' => $id])->all();
+
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'leaders' => $leaders,
         ]);
     }
 

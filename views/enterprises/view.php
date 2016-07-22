@@ -6,6 +6,7 @@ use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Enterprises */
+/* @var $leaders app\models\Leaders[] */
 
 $this->title = $model->TITLE;
 $this->params['breadcrumbs'][] = ['label' => 'Предприятия', 'url' => ['index']];
@@ -36,43 +37,8 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
     </div>
-<div class="leaders-index">
-        <?php $code = $model -> CODE; ?>
-        <?=
-        GridView::widget([
-            'dataProvider' => \app\controllers\EnterprisesController::getLeaders($code),
-            'summary' => "",
-            'columns' =>
-                [
-                    [
-                        'label' => 'Фамилия',
-                        'value' => 'FNAME'
-                    ],
-                    [
-                        'label' => 'Имя',
-                        'value' => 'NAME'
-                    ],
-                    [
-                        'label' => 'Отчество',
-                        'value' => 'PATRONYMIC'
-                    ],
-                    [
-                        'label' => 'E-mail',
-                        'value' => 'EMAIL'
-                    ],
-                    [
-                        'label' => 'Телефон',
-                        'value' => 'PHONE'
-                    ],
-                    [
-                        'class' => 'yii\grid\ActionColumn',
-                        'template'    => '{view} {update} {delete}',
-                        'controller' => '/leaders',
-                    ]
-                    ],
 
-
-
-        ]);?>
-
-</div>
+<?php foreach ($leaders as $leader): ?>
+    <?= $leader->FNAME . '<br>' ?>
+    <?= $leader->NAME . '<br>' ?>
+<?php endforeach; ?>
